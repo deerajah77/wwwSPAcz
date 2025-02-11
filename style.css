@@ -28,14 +28,16 @@
     margin: 8px 0;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
     font-weight: bold;
+    border: 2px solid transparent;
 }
 
 /* Zvýraznění vybrané možnosti */
 .custom-form input[type="radio"]:checked + label {
     background: #007bff;
     color: white;
+    border: 2px solid #0056b3;
 }
 
 /* Skrytí původních radio buttonů */
@@ -66,6 +68,12 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
+}
+
+/* Zvýraznění povinného pole při nevyplnění */
+.custom-form input:invalid,
+.custom-form textarea:invalid {
+    border: 2px solid red;
 }
 
 /* Tlačítko */
